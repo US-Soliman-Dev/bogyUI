@@ -50,10 +50,10 @@ useEffect( () => {
             </div>
             <div>
               <input type="checkbox" id="check3" />
-              <label htmlFor="check3">Boomer UI</label>
+              <label htmlFor="check3">Bogy UI</label>
             </div>
             <h1>
-              theming support out of the box<span> Boomer UI</span>
+              theming support out of the box<span> Bogy UI</span>
             </h1>
 
             <p>
@@ -68,7 +68,7 @@ useEffect( () => {
             </div>
           </article>
           <div className="chape">
-            <div className="d-1"> BOOMER UI</div>
+            <div className="d-1"> Bogy UI</div>
             <div className="d-2"></div>
             <div className="d-3"></div>
             <div className="d-4">15</div>
