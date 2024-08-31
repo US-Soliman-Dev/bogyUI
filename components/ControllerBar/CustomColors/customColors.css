@@ -1,0 +1,151 @@
+.custom-color {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 25rem;
+    padding: .5rem 1rem;
+    color: #fff;
+    gap: .8rem;
+    /* border: 1px solid var(--accent); */
+}
+.custom-color .default{
+    width: 100%;
+    padding-block: .5rem;
+    text-align: center;
+    font-weight: 100;
+    border-radius: 1rem;
+    outline: 1px solid #fff;
+    text-shadow: 0 0 5px #00f7ff,
+    0 0 10px #00f7ff;
+    letter-spacing: 2px;
+    user-select: none;
+    animation: shadow .2s ease-in-out forwards alternate-reverse infinite,
+    light .2s ease-in-out forwards alternate-reverse infinite;
+}
+
+.custom-color h3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    border-radius: 1rem;
+    padding-block: .2rem;
+    letter-spacing: 2px;
+    font-weight: 100;
+    outline: 1px solid #fff;
+    text-shadow: 0 0 5px #00f7ff,
+    0 0 10px #00f7ff;
+    box-shadow: 0 0 10px 2px var(--accent), inset 0 0 5px 2px var(--accent);
+    user-select: none;
+
+    animation: shadow .2s ease-in-out forwards alternate-reverse infinite,
+        light .2s ease-in-out forwards alternate-reverse infinite;
+}
+
+
+
+.input-box {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    /* padding: .5rem 1rem; */
+    gap: 1.5rem;
+}
+
+.custom-color label {
+    position: relative;
+    width: 1.8rem;
+    height: 1.8rem;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    outline: 1px solid var(--text);
+    outline-offset: 2px;
+    user-select: none;
+    transition: .2s ease-in;
+    cursor: pointer;
+}
+
+.custom-color label p {
+    position: absolute;
+    top: 115%;
+    font-size: .7rem;
+    font-weight: 700;
+}
+
+.custom-color label input {
+    width: 0;
+    height: 0;
+    visibility: hidden;
+    appearance: none;
+    position: absolute;
+    top: 0;
+}
+
+.custom-color label.primary {
+    background-color: var(--primary);
+}
+
+.custom-color label.primary:active,
+.custom-color label.primary:focus,
+.custom-color label.primary:hover {
+    box-shadow: 0px 0px 12px 8px var(--primary);
+    outline: 2px solid #fff;
+}
+
+.custom-color label.secondary {
+    background-color: var(--secondary);
+}
+
+.custom-color label.secondary:active,
+.custom-color label.secondary:focus,
+.custom-color label.secondary:hover {
+    box-shadow: 0px 0px 12px 8px var(--secondary);
+    outline: 2px solid #fff;
+}
+
+.custom-color label.background {
+    background-color: var(--background);
+}
+
+.custom-color label.background:active,
+.custom-color label.background:focus,
+.custom-color label.background:hover {
+    box-shadow: 0px 0px 12px 8px var(--background);
+    outline: 2px solid #fff;
+}
+
+.custom-color label.accent {
+    background-color: var(--accent);
+}
+
+.custom-color label.accent:active,
+.custom-color label.accent:focus,
+.custom-color label.accent:hover {
+    box-shadow: 0px 0px 12px 8px var(--accent);
+    outline: 2px solid #fff;
+}
+
+.custom-color label.hover {
+    background-color: var(--hover);
+}
+
+.custom-color label.hover:active,
+.custom-color label.hover:focus,
+.custom-color label.hover:hover {
+    box-shadow: 0px 0px 12px 8px var(--hover);
+    outline: 2px solid #fff;
+}
+
+.custom-color label.text {
+    background-color: var(--text);
+}
+
+.custom-color label.text:active,
+.custom-color label.text:focus,
+.custom-color label.text:hover {
+    box-shadow: 0px 0px 12px 8px var(--text);
+    outline: 2px solid #fff;
+}

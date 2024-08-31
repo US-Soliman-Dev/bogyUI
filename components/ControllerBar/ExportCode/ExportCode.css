@@ -1,0 +1,228 @@
+/* /////////////////////////////////////////////////////// Export Code */
+.export-code {
+    width: 40dvw;
+    height: 60dvh;
+    position: absolute;
+    bottom: 110%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--secondary);
+    color: #fff;
+    padding: 2rem;
+    border-radius: 1rem;
+    overflow: hidden;
+    background-color: hsla(0, 0%, 10%, 0.7);
+    backdrop-filter: blur(15px);
+    z-index: 20000;
+}
+
+.export-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 85px;
+    height: 85px;
+    color: #eee;
+    /* text-shadow: 0 2px 1px #fff; */
+    font-size: 1.7rem;
+    font-weight: 900;
+    border: none;
+    outline: 3px solid hsl(213, 19%, 36%);
+    outline-offset: 3px;
+    background-color: #333;
+    border-radius: 50%;
+    user-select: none;
+    transition: .2s ease-in-out;
+    cursor: pointer;
+}
+.export-button:active,
+.export-button:hover {
+    box-shadow:  0px 0px 12px 8px var(--accent);
+    outline: 2px solid #eee;
+    outline-offset: 3px;
+}
+
+.export-code .close {
+    position: absolute;
+    right: 3%;
+    top: 3%;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: hsla(0, 0%, 10%, 0.6);
+    border: none;
+    border-radius: .5rem;
+    outline: 2px solid hsla(0, 0%, 100%, 0.1);
+    outline-offset: 3px;
+    color: hsla(0, 0%, 100%, 0.9);
+    transition: .3s linear;
+}
+
+.export-code .close:hover {
+    outline: none;
+
+}
+
+.export-code h1 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-block: 0 .5rem;
+    border-bottom: 1px solid #aaa;
+    color: #fff;
+}
+.export-code h1 div{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    border: 1px solid #aaa;
+    border-radius: 1rem;
+    min-width: 30%;
+    padding: .5rem .3rem;
+    margin-left: 1rem;
+}
+.export-code h1 div span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: .8rem;
+    width: fit-content;
+}
+.export-code h1 div *{
+    width: 1.5rem;
+    height: 1.5rem;
+    fill: #eee;
+}
+
+.export-code .colorType {
+    margin-inline: auto;
+    margin-block: 1rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 2rem;
+    /* border: 1px solid #aaa; */
+    padding-right: 2rem;
+
+}
+
+.type-label{
+    width: 35px;
+    height: 35px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: 2px solid hsl(213, 13%, 68%);
+    outline-offset: 3px;
+    border-radius: 50%;
+    user-select: none;
+    transition: .2s ease-in;
+    cursor: pointer;
+}
+.type-label:focus,
+.type-label:active,
+.type-label:hover,
+.type-label[data-colorType='active'] {
+    box-shadow: 0px 0px 12px 5px  var(--accent);
+    outline: 2px solid #ddd;
+    /* color: var(--accent); */
+}
+
+
+
+.export-code .code-box {
+    width: 100%;
+    height: 70%;
+    display: flex;
+    /* gap: .5rem; */
+    border: .2rem;
+    border-top-right-radius: 3rem;
+    border-bottom-right-radius: 3rem;
+    /* outline: 2px solid #ccc; */
+    overflow: hidden;
+    /* padding:  .5rem 0; */
+}
+
+.code-setting {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 0;
+    gap: .5rem;
+    /* background-color: var(--primary); */
+    /* outline: 1px solid #eee; */
+}
+
+.code-setting label {
+    /* background-color: hsla(0, 0%, 10%, 0.5); */
+    border-top-left-radius: .5rem;
+    border-bottom-left-radius: .5rem;
+    width: 100%;
+    text-transform: capitalize;
+    text-align: center;
+    padding: .3rem .5rem;
+    color: #fff;
+    letter-spacing: 2px;
+    transition: .2s linear;
+    cursor: pointer;
+}
+
+.code-setting label[data-code='active'] {
+    cursor: pointer;
+    touch-action: manipulation;
+    /* prevent swipe on mobile */
+    user-select: none;
+    text-shadow: 1px 1px 2px var(--accent);
+    /* disable text selection (safari)*/
+    background-color: hsla(0, 0%, 100%, 0.1);
+}
+
+.type-label input[type='radio'] ,
+.code-setting input[type='radio'] {
+    position: absolute;
+    width: 0;
+    height: 0;
+    display: none;
+    visibility: hidden;
+    appearance: none;
+}
+
+
+
+.export-code .code-box pre {
+    position: relative;
+    display: block;
+    flex-grow: 1;
+    padding: 1rem;
+    border-radius: .5rem;
+    background-color: hsla(0, 0%, 100%, 0.1);
+    overflow: auto;
+}
+
+
+.export-code .code-box pre::-webkit-scrollbar {
+    width: 1vh;
+    height: 100%;
+    margin: 9rem;
+    background-color: hsl(212, 11%, 35%);
+}
+
+.export-code .code-box pre::-webkit-scrollbar-track {
+    background: hsl(205, 11%, 35%);
+}
+
+.export-code .code-box pre::-webkit-scrollbar-thumb {
+    border-radius: 1vh;
+    background-color: hsl(200, 18%, 46%);
+}
+
+
+.export-code code {
+    display: block;
+    padding: 1rem;
+    /* width: 110%; */
+    font-weight: 600;
+}
+
+

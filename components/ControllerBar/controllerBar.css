@@ -1,0 +1,176 @@
+/* ///////////////////////////////////////////////////// Controller Bar */
+.controller {
+    position: fixed;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* width: max(300px , 60%); */
+    height: 15dvh;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* flex-wrap: wrap; */
+    gap: 3rem;
+    z-index: 100;
+    border: 2px solid hsla(0, 0%, 0%, 0.5);
+    /* overflow: hidden; */
+    /* background-color: hsla(0, 0%, 10%, 0.5); */
+    outline: 2px solid hsla(0, 0%, 0%, 0.5);
+    outline-offset: 5PX;
+    border-radius: 2rem;
+}
+
+.layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: hsla(0, 0%, 10%, 0.5);
+    height: 100%;
+    backdrop-filter: blur(15px);
+    border: none;
+    outline: none;
+    border-radius: 2rem;
+    z-index: -1200;
+    /* border: 20px solid #333; */
+    pointer-events: none;
+}
+
+.random-button {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 85px;
+    height: 85px;
+    /* margin-bottom: 85px; */
+    border: none;
+    outline: 3px solid hsl(213, 19%, 36%);
+    outline-offset: 3px;
+    background-color: #333;
+    border-radius: 50%;
+    transition: .2s ease-in-out;
+    user-select: none;
+    cursor: pointer;
+}
+.random-button:active,
+.random-button:hover {
+    box-shadow:  0px 0px 12px 8px var(--accent);
+    outline: 2px solid #eee;
+    outline-offset: 3px;
+}
+
+/* background: conic-gradient(
+    var(--accent),
+    var(--accent) 20%,
+    var(--primary) 20%,
+    var(--primary) 40%,
+    var(--hover) 40%,
+    var(--accent) 40%,
+    var(--accent) 60%,
+    var(--hover) 60%,
+    var(--hover) 80%,
+    var(--primary) 80%);     */
+
+/* .random-button::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    width: 120%;
+    height: 120%;
+    background-color: var(--background);
+    border-radius: 50%;
+    z-index: -1;
+} */
+
+/* background-color: hsla(0, 0%, 55%, 0.5); */
+/* box-shadow: inset 5px 3px 5px 0 hsl(0, 0%, 100%, .2),
+inset -5px -5px 5px 0 hsl(0, 0%, 0%, .5); */
+/* background-image: linear-gradient(to top , red  , red 40% , transparent 40% ); */
+/* place-items: center; */
+
+
+.random-button div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 100%;
+    height: 100%;
+    /* color: #aaa; */
+}
+
+
+
+.random-button div span{
+    width: max-content;
+    height: max-content;
+    font-size: 20px;
+    line-height: 25px;
+    text-align: center;
+    border-radius: 50%;
+    border: 1px solid transparent;
+    transition: 1s ease-in-out;
+    user-select: none;
+}
+
+.random-button div span.active {
+    transform: rotate(740deg);
+}
+
+
+.random-button div span.s1 {
+    color: var(--primary);
+    transition: 2s;
+}
+
+.random-button div span.s2 {
+    color: var(--accent);
+    transition: 1s;
+}
+
+.random-button div span.s3 {
+    color: var(--hover);
+    transition: 4s;
+}
+
+.random-button div span.s4 {
+    color: var(--hover);
+    transition: 6s;
+}
+
+.random-button div span.s5 {
+    color: var(--primary);
+}
+
+.random-button div span.s6 {
+    color: var(--accent);
+    transition: 4s;
+}
+
+.random-button span.s2.active {
+    transform: rotate(-540deg);
+    transition: 4s;
+}
+
+
+.random-button span.s3.active {
+    transform: rotate(-340deg);
+    transition: 3s;
+}
+
+
+.random-button span.s5.active {
+    transform: rotate(-840deg);
+    transition: 5s;
+}
+
+
+.random-button span.s6.active {
+    transform: rotate(-240deg);
+    transition: 3s;
+}

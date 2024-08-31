@@ -1,0 +1,365 @@
+@import url("https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,700;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Gluten:wght@100&family=Patrick+Hand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Signika+Negative:wght@300;400&display=swap");
+
+:root,
+:root[data-theme="light"] {
+  --primary: hsl(145, 46%, 55%);
+  --secondary: hsl(50, 35%, 86%);
+  --background: hsl(27, 43%, 96%);
+  --accent: hsl(31, 76%, 55%);
+  --text: hsl(146, 11%, 25%);
+  --hover: hsl(165, 51%, 75%);
+
+  --system-primary: hsl(145, 51%, 65%);
+  --system-secondary: hsl(47, 11%, 25%);
+  --system-background: hsl(30, 11%, 15%);
+  --system-accent: hsl(31, 86%, 55%);
+  --system-text: hsl(145, 92%, 95%);
+  --system-hover: hsl(165, 71%, 65%);
+}
+
+:root[data-theme="dark"] {
+  --primary: var(--system-primary);
+  --secondary: var(--system-secondary);
+  --background: var(--system-background);
+  --accent: var(--system-accent);
+  --text: var(--system-text);
+  --hover: var(--system-hover);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root,
+  :root[data-theme="auto"] {
+    --primary: var(--system-primary);
+    --secondary: var(--system-secondary);
+    --background: var(--system-background);
+    --accent: var(--system-accent);
+    --text: var(--system-text);
+    --hover: var(--system-hover);
+  }
+}
+
+/* :hover {
+  outline: 1px solid rgba(255, 238, 0, 0.541);
+} */
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  /* user-select: none; */
+  outline: none;
+  /* outline: 1px solid yellowgreen; */
+}
+
+*::after,
+*::before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+
+/* html.transition,
+    html.transition *,
+    html.transition *::before,
+    html.transition *::before {
+      transition: all .5s ease-in !important;
+      transition-delay: 0 !important;
+    } */
+
+*::-webkit-scrollbar {
+  width: 1vh;
+  height: 100%;
+  background-color: var(--primary, hsl(212, 11%, 35%));
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--text, hsl(212, 11%, 35%));
+}
+
+*::-webkit-scrollbar-thumb {
+  border-radius: 1vh;
+  background-color: var(--hover, hsl(200, 18%, 46%));
+}
+
+*::selection {
+  background: #505963;
+  color: #e0edf5;
+}
+/* ////////////////////////////////////////////////////////// */
+
+html,
+body {
+  /* --------- Font & Size */
+  font-family: "Roboto Condensed", "Roboto", sans-serif, "Open Sans";
+  --body-font-1: "Signika Negative", "Roboto Condensed", "Roboto", , sans-serif,
+    "Open Sans";
+  --body-font-2: "Patrick Hand", cursive;
+  --body-font-3: "Gluten", cursive;
+
+  --biggest-size: 5rem;
+  --bigger-size: 3.5rem;
+  --big-size: 2.5rem;
+  --me-size: 1.5rem;
+  --s1-size: 1.2rem;
+  --s2-size: 0.85rem;
+  min-height: 100dvh;
+  min-height: 300vh;
+  background-color: var(--background);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: var(--body-font-2);
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+i {
+  user-select: none;
+}
+
+/* ////////////////////////////////////////////////////////// */
+/* ================== Responsive (Screen)  ============ Start === */
+/* Start----------------small Screen ----------- */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+/* Start--------------Medium Screen ----------- */
+@media screen and (min-width: 992px) {
+  :root {
+    font-size: 14px;
+    /* --------- Font & Size */
+    --body-font: "Roboto", "Open Sans", sans-serif;
+    --biggest-size: 7rem;
+    --bigger-size: 4.5rem;
+    --big-size: 2rem;
+    --me-size: 1rem;
+    --s1-size: 0.9rem;
+    --s2-size: 0.813rem;
+  }
+  .container {
+    width: 970px;
+  }
+}
+/* Start--------------Large Screen------------------------------- */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+/* End----------------Large Screen------------------------------- */
+.container {
+  margin: 0 auto;
+}
+/* =================================  Screen ============ End === */
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.box {
+  min-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.wave{
+  text-transform: none;
+  background-color: transparent;
+  position: absolute;
+  width: 100%;
+  bottom: -10%;
+  user-select: none;
+  pointer-events: none;
+}
+.wave .line{
+  color: transparent !important;
+  text-align: center;
+  font-size: 3rem;
+  text-decoration-color: var(--accent) ;  
+  text-decoration-line: underline;
+  text-decoration-style: wavy;
+}
+
+
+/* .switch label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  width: 2rem;
+  height: 2rem;
+  user-select: none;
+} */
+
+/* .switch input[type='radio'] {
+  width: 0;
+  height: 0;
+  display: none;
+  visibility: hidden;
+  appearance: none;
+} */
+
+/* ///////////////////////////////////////////////////////////////////////////// */
+.glass {
+  position: relative;
+  color: aqua;
+  width: 140px;
+  height: 38px;
+  border: 1px solid hsla(0, 0%, 100%, 0.5);
+  background-color: hsla(0, 0%, 100%, 0.05);
+  backdrop-filter: blur(15px);
+  box-shadow: 0 0 5px hsla(0, 0%, 100%, 0.2);
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.glass::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: -100%;
+  top: 0;
+  background-image: linear-gradient(
+    to right,
+    transparent,
+    hsl(0, 0%, 100%, 0.5),
+    transparent
+  );
+  pointer-events: none;
+}
+
+.glass:hover::before {
+  animation: hovers 0.3s linear forwards;
+}
+
+.b {
+  width: 160px;
+  padding: 0.5rem 1rem;
+  background-color: var(--primary);
+  color: var(--background);
+  border-radius: 0.5rem;
+  border: none;
+  outline: none;
+  align-self: end;
+  transition: 0.07s linear;
+  cursor: pointer;
+}
+
+@keyframes hovers {
+  0% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(200%);
+  }
+}
+
+@keyframes shadow {
+  25.1%,
+  30%,
+  50%,
+  70%,
+  85.1%,
+  90%,
+  100% {
+    color: #fff;
+    /* border-style: solid; */
+    outline-color: #fff;
+    text-shadow: 0 0 5px #00f7ff, 0 0 10px #00f7ff;
+
+    box-shadow: 0 0 5px 0 var(--accent), inset 0 0 10px 0 var(--accent),
+      0 0 20px 0 var(--accent);
+  }
+}
+
+@keyframes text {
+  25.1%,
+  30%,
+  50%,
+  70%,
+  85.1%,
+  90%,
+  100% {
+    color: #fff;
+    /* border-style: solid; */
+    text-shadow: 0 0 5px var(--accent), 0 0 10px #00f7ff;
+  }
+}
+
+@keyframes light {
+  0% {
+    opacity: 1;
+  }
+
+  30% {
+    opacity: 1;
+  }
+
+  40% {
+    opacity: 0.5;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Enable hover only on non-touch devices */
+
+/* @media (hover: hover) and (pointer: fine) {
+  .card:hover {
+    background: rgba(var(--card-rgb), 0.1);
+    border: 1px solid rgba(var(--card-border-rgb), 0.15);
+  }
+
+  .card:hover span {
+    transform: translateX(4px);
+  }
+}
+
+@media (prefers-reduced-motion) {
+  .card:hover span {
+    transform: none;
+  }
+} */

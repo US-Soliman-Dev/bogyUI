@@ -1,0 +1,69 @@
+
+.scheme-box {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: flex-end;
+   /* border: 1px solid #ddd; */
+   width: 130px;
+   gap: .5rem;
+
+}
+
+.scheme-box label {
+   display: flex;
+   justify-content: flex-end;
+   align-items: center;
+   background-color: #333;
+   border-radius: 20px;
+   width: 100%;
+   transition: .2s ease-in;
+   cursor: pointer;
+}
+/* .scheme-box label:active,
+.scheme-box label:hover {
+   text-shadow:  0px 0px 5px  var(--accent);
+   color: #fff;
+} */
+.scheme-box label span.icon {
+   width: 40px;
+   height: 40px;
+   border-radius: 50%;
+   font-size: 2rem;
+   text-align: center;
+   line-height: 35px;
+   color: var(--accent);
+   margin-left: .5rem;
+   outline: 3px solid hsl(213, 19%, 36%);
+   transition: all .3s ease-in , transform 1s ease-in-out;
+}
+
+.scheme-box label:active span.icon ,
+.scheme-box label:hover span.icon {
+   box-shadow: inset  0px 0px 5px 1px  var(--accent);
+   outline: 2px solid #ddd;
+}
+.scheme-box label:hover span.icon {
+   transform: rotate(380deg);
+}
+
+.scheme-box label span.title {
+   /* border: 1px solid #777; */
+   color: #aaa;
+   font-weight: 400;
+
+}
+.scheme-box label:active span.title,
+.scheme-box label:hover span.title{
+   text-shadow:  0px 0px 5px  var(--accent);
+   color: #fff;
+}
+.scheme-box label.active span.title{
+   animation: text .2s linear  infinite;
+}
+
+.scheme-box label input {
+   display: none;
+}
+
+
