@@ -4,20 +4,20 @@ import { useEffect } from "react";
 
 export default function Home() {
 
-useEffect( () => {
+  useEffect(() => {
 
-  const el = (el: string | any) => document.querySelector(el);
-  const positionEl = el('.bx-article').offsetTop + window.innerHeight / 2
+    const el = (el: string | any) => document.querySelector(el);
+    const positionEl = el('.bx-article').offsetTop + window.innerHeight / 2
 
-  window.addEventListener( 'scroll' , () => {
-    if(window.scrollY >= positionEl ) {
-      el('.bx-article').classList.add('move')
-    } else {
-      el('.bx-article').classList.remove('move')
-    }
-  })
+    window.addEventListener('scroll', () => {
+      if (window.scrollY >= positionEl) {
+        el('.bx-article').classList.add('move')
+      } else {
+        el('.bx-article').classList.remove('move')
+      }
+    })
 
-} , [])
+  }, [])
 
 
   return (
@@ -29,7 +29,7 @@ useEffect( () => {
           <div className="container">
             <div className="list">
               <div className="logo">
-                Boomer<span>UI</span>
+                Bogy<span>UI</span>
               </div>
               <ul>
                 <li>home</li>
@@ -42,11 +42,11 @@ useEffect( () => {
           <article>
             <div>
               <input type="checkbox" id="check1" />
-              <label htmlFor="check1">Boomer UI</label>
+              <label htmlFor="check1">Bogy UI</label>
             </div>
             <div>
               <input type="checkbox" id="check2" />
-              <label htmlFor="check2">Boomer UI</label>
+              <label htmlFor="check2">Bogy UI</label>
             </div>
             <div>
               <input type="checkbox" id="check3" />
@@ -127,7 +127,7 @@ useEffect( () => {
                 <span className="icon-plus"></span>
               </a>
             </div>
-            
+
             <div className="fade-in bx bx-Development">
               <h2>
                 Development
